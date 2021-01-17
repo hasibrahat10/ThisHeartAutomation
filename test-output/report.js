@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Registration.feature");
 formatter.feature({
-  "name": "Login ThisHeart",
+  "name": "Register a new user",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Login with valid credentials",
+  "name": "Register a valid user with info",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@test-login"
+      "name": "@test-register"
     }
   ]
 });
@@ -18,65 +18,44 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on advance button",
+  "name": "click on Advance details btn",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.LoginSteps.click_on_advance_button()"
+  "location": "stepDefinitions.RegisterSteps.clickOnAdvanceDetailsBtn()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on back to safe button",
+  "name": "click on proceed to safe btn",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.LoginSteps.click_on_back_to_safe_button()"
+  "location": "stepDefinitions.RegisterSteps.clickOnProceedToSafeBtn()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter user details",
+  "name": "Enter user valid info",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.LoginSteps.enter_user_details()"
+  "location": "stepDefinitions.RegisterSteps.enter_user_valid_info()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click on login",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.LoginSteps.click_on_login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Skip",
+  "name": "click on register",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.LoginSteps.click_on_Skip()"
+  "location": "stepDefinitions.RegisterSteps.click_on_register()"
 });
 formatter.result({
   "status": "passed"
-});
-formatter.step({
-  "name": "Page title should be \"ThisHeart- Dashboard\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.LoginSteps.pageTitleShouldBe(java.lang.String)"
-});
-formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepDefinitions.LoginSteps.pageTitleShouldBe(LoginSteps.java:43)\r\n\tat ✽.Page title should be \"ThisHeart- Dashboard\"(file:///F:/ThisHeartAutomation/src/test/java/features/Login.feature:10)\r\n",
-  "status": "failed"
 });
 formatter.after({
   "status": "passed"

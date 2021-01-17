@@ -9,7 +9,7 @@ public class Hooks extends BasePage {
     public void setUpDriver() {
         startDriver();
         driver.manage().window().maximize();
-        driver.get("https://thisheart.co/login");
+        driver.get("https://thisheart.co/register");
     }
 
     @After

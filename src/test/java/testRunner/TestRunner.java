@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"F:\\ThisHeartAutomation\\src\\test\\java\\features"},
-        tags = {"@test-login"},
+        tags = {"@test-register"},
         glue = "stepDefinitions",
         monochrome = true,
         plugin = {"pretty", "html:test-output"}
