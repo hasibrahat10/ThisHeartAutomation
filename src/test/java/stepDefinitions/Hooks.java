@@ -4,12 +4,15 @@ package stepDefinitions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
+import java.util.concurrent.TimeUnit;
+
 public class Hooks extends BasePage {
     @Before
     public void setUpDriver() {
         startDriver();
         driver.manage().window().maximize();
-        driver.get("https://thisheart.co/register");
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.get("https://thisheart.co/login");
     }
 
     @After

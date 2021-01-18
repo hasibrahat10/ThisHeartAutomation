@@ -5,14 +5,15 @@ import org.junit.Assert;
 import pages.Login;
 
 public class LoginSteps extends BasePage {
+
     @Then("click on advance button")
     public void click_on_advance_button() {
-        new Login().advDetails();
+//        new Login().advDetails();
     }
 
     @Then("click on back to safe button")
     public void click_on_back_to_safe_button() {
-        new Login().proceedToLogin();
+//        new Login().proceedToLogin();
 
     }
 
@@ -42,6 +43,6 @@ public class LoginSteps extends BasePage {
 
             Assert.assertTrue(false);
         } else Assert.assertEquals(title, driver.getTitle());
-        driver.quit();
+
     }
 }

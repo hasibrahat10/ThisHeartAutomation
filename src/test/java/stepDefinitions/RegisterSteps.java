@@ -1,20 +1,13 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-
-import pages.Login;
 import pages.Registration;
 
 public class RegisterSteps extends BasePage {
-
-    @Then("click on Advance details btn")
-    public void clickOnAdvanceDetailsBtn() {
-        new Registration().advDetailsBtn();
-    }
-
-    @Then("click on proceed to safe btn")
-    public void clickOnProceedToSafeBtn() {
-        new Registration().proceedToLoginBtn();
+    @Given("I am on registration page")
+    public void iAmOnRegistrationPage() {
+        new Registration().clickCreateAnAccountLink();
     }
 
     @Then("Enter user valid info")

@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Registration.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Memories.feature");
 formatter.feature({
-  "name": "Register a new user",
+  "name": "ThisHeart Memories Page",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Register a valid user with info",
+  "name": "User can add a new photo in memories page",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@test-register"
+      "name": "@test-addPhoto"
     }
   ]
 });
@@ -18,41 +18,51 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on Advance details btn",
-  "keyword": "Then "
+  "name": "I am on dashboard page",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "stepDefinitions.RegisterSteps.clickOnAdvanceDetailsBtn()"
+  "location": "stepDefinitions.DashboardSteps.iAmOnDashboardPage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on proceed to safe btn",
+  "name": "I click on memories link",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.RegisterSteps.clickOnProceedToSafeBtn()"
+  "location": "stepDefinitions.DashboardSteps.iClickOnMemoriesLink()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter user valid info",
-  "keyword": "Then "
+  "name": "I click on add new photo button",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.RegisterSteps.enter_user_valid_info()"
+  "location": "stepDefinitions.MemoriesSteps.i_click_on_add_new_photo_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on register",
+  "name": "I fill add photo form and click upload button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.MemoriesSteps.i_fill_add_photo_form_and_click_upload_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should see photo upload status 100%",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.RegisterSteps.click_on_register()"
+  "location": "stepDefinitions.MemoriesSteps.iShouldSeePhotoUploadStatus(int)"
 });
 formatter.result({
   "status": "passed"

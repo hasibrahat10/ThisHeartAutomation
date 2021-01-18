@@ -3,6 +3,7 @@ package stepDefinitions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,11 +12,13 @@ public class BasePage {
     public static WebDriver driver;
 
     public void startDriver() {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--ignore-certificate-errors");
         System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir") + "/drivers/chromedriver_win32/chromedriver.exe");
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
         Logger.getLogger("").setLevel(Level.OFF);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(chromeOptions);
     }
 
     public void stopDriver() {

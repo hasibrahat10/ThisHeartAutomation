@@ -7,17 +7,14 @@ import stepDefinitions.BasePage;
 
 public class Registration extends BasePage {
 
+    //To Find the Elements for the Registration Page
 
-    @FindBy(id = "details-button")
-    WebElement btnAdv;
-
-    @FindBy(id = "proceed-link")
-    WebElement btnProceed;
+    @FindBy(xpath = "//a[text()='Create an account']")
+    WebElement createBtn;
 
     @FindBy(id = "userEmail")
     WebElement emailID;
 
-    //To Find the Elements for the Registration Page
     @FindBy(id = "userName")
     WebElement fullName;
     @FindBy(id = "userPassword")
@@ -30,18 +27,11 @@ public class Registration extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    //Custom Method declare for the steps
 
-    public void advDetailsBtn() {
-        sleepFor(1);
-        btnAdv.click();
-
+    public void clickCreateAnAccountLink() {
+        createBtn.click();
     }
-
-    public void proceedToLoginBtn() {
-        sleepFor(1);
-        btnProceed.click();
-    }
-
 
     public void userInfo() {
         emailID.clear();
@@ -52,6 +42,7 @@ public class Registration extends BasePage {
         userPass.sendKeys("hasib12345;;");
         sleepFor(3);
     }
+
 
     public void registerUser() {
         registerBtn.click();
