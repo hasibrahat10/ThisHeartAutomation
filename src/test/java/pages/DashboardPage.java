@@ -12,6 +12,10 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//a[text()='Memories']")
     WebElement memLink;
 
+    @FindBy(xpath = "//a[text()='Accounts']")
+    WebElement accountLink;
+
+
     public DashboardPage() {
 
         PageFactory.initElements(driver, this);
@@ -23,5 +27,12 @@ public class DashboardPage extends BasePage {
     public void clickMemoriesLink() {
         memLink.click();
     }
+
+
+    public void clickAccountsLink() {
+        accountLink.click();
+    }
+
+
 
 }

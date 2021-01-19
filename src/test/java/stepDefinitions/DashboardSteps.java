@@ -12,6 +12,7 @@ public class DashboardSteps extends BasePage {
         login.userInfo();
         login.clickLogin();
         login.clickSkip();
+        sleepFor(3);
     }
 
 
@@ -19,6 +20,12 @@ public class DashboardSteps extends BasePage {
     public void iClickOnMemoriesLink() {
         new DashboardPage().clickMemoriesLink();
     }
+
+    @Then("I click on account link")
+    public void i_click_on_account_link() {
+        new DashboardPage().clickAccountsLink();
+    }
+
 
 
 }
