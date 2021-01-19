@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import stepDefinitions.BasePage;
 
-public class Registration extends BasePage {
+public class RegistrationPage extends BasePage {
 
     //To Find the Elements for the Registration Page
 
@@ -17,13 +17,15 @@ public class Registration extends BasePage {
 
     @FindBy(id = "userName")
     WebElement fullName;
+
     @FindBy(id = "userPassword")
     WebElement userPass;
+
     @FindBy(xpath = "//button[contains(text(),'Register')]")
     WebElement registerBtn;
 
     //constructor define
-    public Registration() {
+    public RegistrationPage() {
         PageFactory.initElements(driver, this);
     }
 

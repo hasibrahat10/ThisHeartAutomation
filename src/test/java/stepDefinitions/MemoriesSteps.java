@@ -3,17 +3,17 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.Memories;
+import pages.MemoriesPage;
 
 public class MemoriesSteps extends BasePage {
     @Then("I click on add new photo button")
     public void i_click_on_add_new_photo_button() {
-        new Memories().addNewPhotoBtn();
+        new MemoriesPage().addNewPhotoBtn();
     }
 
     @Then("I fill add photo form and click upload button")
     public void i_fill_add_photo_form_and_click_upload_button() {
-        Memories memories = new Memories();
+        MemoriesPage memories = new MemoriesPage();
         memories.enterTag();
         sleepFor(1);
         memories.uploadPhoto();
@@ -23,7 +23,7 @@ public class MemoriesSteps extends BasePage {
 
     @Then("I should see photo upload status {int}%")
     public void iShouldSeePhotoUploadStatus(int statusProgress) {
-        Assert.assertEquals(statusProgress + "%", new Memories().getUploadProgress());
+        Assert.assertEquals(statusProgress + "%", new MemoriesPage().getUploadProgress());
 //        String text= Integer.toString(statusProgress);
 //        System.out.println(text);
 
@@ -31,18 +31,18 @@ public class MemoriesSteps extends BasePage {
 
     @And("I click on letter nav link")
     public void iClickOnLetterNavLink() {
-        new Memories().navLinkClick();
-        
+        new MemoriesPage().navLinkClick();
+
     }
 
     @And("I click on add new letter button")
     public void iClickOnAddNewLetterButton() {
-        new Memories().clickOnAddLetterButton();
+        new MemoriesPage().clickOnAddLetterButton();
     }
 
     @And("I fill add letter form and click save button")
     public void iFillAddLetterFormAndClickSaveButton() {
-        Memories memories = new Memories();
+        MemoriesPage memories = new MemoriesPage();
         memories.enterSubjectLetter();
         memories.enterTag();
         memories.enterDescription();

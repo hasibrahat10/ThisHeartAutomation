@@ -21,11 +21,13 @@ public class BasePage {
         driver = new ChromeDriver(chromeOptions);
     }
 
+
     public void stopDriver() {
         if (driver != null) {
             driver.quit();
         }
     }
+
 
     public void sleepFor(int seconds) {
         try {

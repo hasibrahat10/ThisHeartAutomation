@@ -1,15 +1,13 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import stepDefinitions.BasePage;
 
-public class Memories extends BasePage {
+public class MemoriesPage extends BasePage {
 
     //Element Finder
-
 
     @FindBy(xpath = "//button[text()='+Add New Photo']")
     WebElement addPhotoBtn;
@@ -27,7 +25,6 @@ public class Memories extends BasePage {
     WebElement uploadProgress;
 
 
-
     // Element for Letter section
     @FindBy(xpath = "//a[text()='Letters']")
     WebElement navLetter;
@@ -35,7 +32,7 @@ public class Memories extends BasePage {
     @FindBy(xpath = "//button[text()='+Add New Letter']")
     WebElement addLetter;
 
-    @FindBy(id="sub_txt")
+    @FindBy(id = "sub_txt")
     WebElement subLetter;
 
     @FindBy(xpath = "//input[@class='react-tagsinput-input']")
@@ -48,13 +45,8 @@ public class Memories extends BasePage {
     WebElement btnSaveLetter;
 
 
-
-
-
-
-
     //Define constructor
-    public Memories() {
+    public MemoriesPage() {
 
         PageFactory.initElements(driver, this);
     }
@@ -83,30 +75,30 @@ public class Memories extends BasePage {
         return uploadProgress.getText();
     }
 
-    public void navLinkClick (){
+    public void navLinkClick() {
         navLetter.click();
     }
 
-    public void clickOnAddLetterButton(){
+    public void clickOnAddLetterButton() {
         addLetter.click();
     }
 
-    public void enterSubjectLetter(){
+    public void enterSubjectLetter() {
         subLetter.clear();
         subLetter.sendKeys("This is subject");
     }
 
-    public void enterLetterTag(){
+    public void enterLetterTag() {
         tagLetter.clear();
         tagLetter.sendKeys("hasibletter");
     }
 
-    public void enterDescription(){
+    public void enterDescription() {
         descriptionLetter.clear();
         descriptionLetter.sendKeys("Letter description for the details. We can add letter");
     }
 
-    public void clickOnSaveButton(){
+    public void clickOnSaveButton() {
         btnSaveLetter.click();
     }
 

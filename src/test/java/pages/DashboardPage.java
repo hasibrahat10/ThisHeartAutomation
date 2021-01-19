@@ -6,13 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import stepDefinitions.BasePage;
 
-public class Dashboard extends BasePage {
+public class DashboardPage extends BasePage {
 
     //Find element for Dashboard page
     @FindBy(xpath = "//a[text()='Memories']")
     WebElement memLink;
 
-    public Dashboard() {
+    public DashboardPage() {
 
         PageFactory.initElements(driver, this);
     }

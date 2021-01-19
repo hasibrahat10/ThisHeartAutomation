@@ -2,7 +2,7 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.Login;
+import pages.LoginPage;
 
 public class LoginSteps extends BasePage {
 
@@ -19,19 +19,19 @@ public class LoginSteps extends BasePage {
 
     @Then("Enter user details")
     public void enter_user_details() {
-        new Login().userInfo();
+        new LoginPage().userInfo();
     }
 
 
     @Then("Click on login")
     public void click_on_login() {
-        new Login().clickLogin();
+        new LoginPage().clickLogin();
 
     }
 
     @Then("Click on Skip")
     public void click_on_Skip() {
-        new Login().clickSkip();
+        new LoginPage().clickSkip();
 
     }
 

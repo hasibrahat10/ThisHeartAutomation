@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import stepDefinitions.BasePage;
 
-public class Login extends BasePage {
+public class LoginPage extends BasePage {
 
 
     // To Find the Elements for the Login Page
@@ -15,14 +15,16 @@ public class Login extends BasePage {
 
     @FindBy(id = "password")
     WebElement password;
+
     @FindBy(xpath = "//button[contains(text(),'Log in')]")
     WebElement btnLogin;
+
     @FindBy(xpath = "//button[contains(text(),'Skip')]")
     WebElement btnSkip;
 
 
     //constructor define
-    public Login() {
+    public LoginPage() {
         PageFactory.initElements(driver, this);
     }
 
