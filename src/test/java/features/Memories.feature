@@ -11,7 +11,16 @@ Feature: ThisHeart Memories Page
     Then I should see photo upload status 100%
 
   @test-addVideo
-  Scenario: User can add a new video in memories page
+  Scenario Outline: User can add a new video in memories page
+    Then I click videos nav link
+    And I click on add new video button
+    And I fill up a new video form using "<option>"
+    Then I should see video upload successful "<status>"
+
+    Examples:
+      | option        |  | status                 |
+      | Url or Link   |  | 100%                   |
+      | Local Storage |  | Url upload is success! |
 
   @test-addLetter
   Scenario: User can add a letter in memories page

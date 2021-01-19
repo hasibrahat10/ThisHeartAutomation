@@ -49,4 +49,34 @@ public class MemoriesSteps extends BasePage {
         sleepFor(2);
         memories.clickOnSaveButton();
     }
+
+    @Then("I click videos nav link")
+    public void iClickVideosNavLink() {
+        new MemoriesPage().clickVideoNav();
+    }
+
+    @And("I click on add new video button")
+    public void iClickOnAddNewVideoButton() {
+        new MemoriesPage().clickOnAddNewVideosButton();
+    }
+
+//    @And("I fill add new video form")
+//    public void iFillAddNewVideoForm() {
+//        MemoriesPage memoriesPage= new MemoriesPage();
+//        memoriesPage.enterLetterTag();
+//        memoriesPage.uploadVideo();
+//
+//    }
+
+    @And("I fill up a new video form using {string}")
+    public void iFillUpANewVideoFormUsingOption(String storage) {
+        MemoriesPage memoriesPage = new MemoriesPage();
+        memoriesPage.enterLetterTag();
+        memoriesPage.uploadVideo(storage);
+    }
+
+    @Then("I should see video upload successful {string}")
+    public void iShouldSeeVideoUploadSuccessful(String status) {
+//        Assert.assertTrue(new MemoriesPage().getVideoUploadProgress(status));
+    }
 }
