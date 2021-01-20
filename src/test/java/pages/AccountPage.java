@@ -7,42 +7,35 @@ import org.openqa.selenium.support.ui.Select;
 import stepDefinitions.BasePage;
 
 public class AccountPage extends BasePage {
+    @FindBy(xpath = "//button[text()='+ Add Account']")
+    WebElement addAccountBtn;
+
+    //Find Elements for account page
+    @FindBy(id = "accName")
+    WebElement accName;
+    @FindBy(id = "accountType")
+    WebElement accountType; // select "Financial" item type
+    @FindBy(id = "textdesc")
+    WebElement textDesc;
+    @FindBy(id = "accUrl")
+    WebElement accUrl;
+    @FindBy(id = "username")
+    WebElement accUserName;
+    @FindBy(id = "password")
+    WebElement password;
+    @FindBy(xpath = "//button[text()='Save']")
+    WebElement accSaveBtn;
+
     public AccountPage() {
 
         PageFactory.initElements(driver, this);
     }
 
-    //Find Elements for account page
-
-    @FindBy(xpath = "//button[text()='+ Add Account']")
-    WebElement addAccountBtn;
-
-    @FindBy(id="accName")
-    WebElement accName;
-
-    @FindBy(id="accountType")
-    WebElement accountType; // select "Financial" item type
-
-    @FindBy(id="textdesc")
-    WebElement textDesc;
-
-    @FindBy(id = "accUrl")
-    WebElement accUrl;
-
-    @FindBy(id="username")
-    WebElement accUserName;
-
-    @FindBy(id = "password")
-    WebElement password;
-
-     @FindBy(xpath = "//button[text()='Save']")
-    WebElement accSaveBtn;
-
-    public void clickAddNewAccountBtn(){
+    public void clickAddNewAccountBtn() {
         addAccountBtn.click();
     }
 
-    public void enterFormInfo(){
+    public void enterFormInfo() {
         accName.clear();
         accName.sendKeys("Hasib account");
 
@@ -63,11 +56,10 @@ public class AccountPage extends BasePage {
 
     }
 
-    public void clickOnSaveButton(){
+    public void clickOnSaveButton() {
         accSaveBtn.click();
         sleepFor(3);
     }
-
 
 
 }

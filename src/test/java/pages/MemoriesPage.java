@@ -177,9 +177,9 @@ public class MemoriesPage extends BasePage {
 
     public boolean getVideoUploadProgress(String status) {
         sleepFor(3);
-        if (driver.findElements(By.xpath("//*[contains(text(),"+ status +")]")).size() > 0) {
+        if (driver.findElements(By.xpath("//*[contains(text()," + status + ")]")).size() > 0) {
             return true;
-        } else return driver.findElements(By.xpath("//*[contains(text(),"+ status +")]")).size() > 0;
+        } else return driver.findElements(By.xpath("//*[contains(text()," + status + ")]")).size() > 0;
     }
 
 

@@ -27,5 +27,8 @@ public class DashboardSteps extends BasePage {
     }
 
 
-
+    @Then("I click on medical link")
+    public void iClickOnMedicalLink() {
+        new DashboardPage().clickMedicalLink();
+    }
 }
