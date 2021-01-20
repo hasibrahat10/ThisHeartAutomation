@@ -14,7 +14,7 @@ public class MedicalSteps extends BasePage {
     public void i_select_a_medical_info_and_click_save_button() {
         MedicalPage medicalPage = new MedicalPage();
         medicalPage.selectMedicalValues("Aortic Valve Stenosis");
-        sleepFor(10);
+        sleepFor(5);
         medicalPage.clickSaveItemMedical();
     }
 
