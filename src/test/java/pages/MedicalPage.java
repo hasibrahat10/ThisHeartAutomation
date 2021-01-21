@@ -10,7 +10,6 @@ import java.util.List;
 public class MedicalPage extends BasePage {
 
 
-
     // Find elements for the medical page
 
     @FindBy(xpath = "//div[@class='card-title' and text()='ME']/following::button")
@@ -24,8 +23,6 @@ public class MedicalPage extends BasePage {
 
     @FindBy(xpath = "//button[text()='Save Items']")
     WebElement saveMedicalItem;
-
-
 
 
     public MedicalPage() {

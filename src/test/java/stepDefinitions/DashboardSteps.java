@@ -31,4 +31,9 @@ public class DashboardSteps extends BasePage {
     public void iClickOnMedicalLink() {
         new DashboardPage().clickMedicalLink();
     }
+
+    @Then("I click on beneficiary link")
+    public void i_click_on_beneficiary_link() {
+        new DashboardPage().clickBeneficiaryLink();
+    }
 }
