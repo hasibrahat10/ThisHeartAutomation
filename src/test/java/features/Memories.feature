@@ -39,7 +39,12 @@ Feature: ThisHeart Memories Page
     Scenario: I want to delete a photo
       Then I click on an item
       Then I confirm the delete button
-      Then I see the success message "Image has been deleted successfully!" 
+      Then I see the success message "Image has been deleted successfully!"
+
+      @test-deleteVideo
+      Scenario: I want to delete a video
+        Then I click videos nav link
+
 
 
 

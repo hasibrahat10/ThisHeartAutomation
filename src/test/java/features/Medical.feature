@@ -1,5 +1,5 @@
 Feature: ThisHeart Medical page
-
+  @test-addMedical
   Scenario: User can add a medical info
     Given I am on dashboard page
     Then I click on medical link

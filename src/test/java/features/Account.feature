@@ -1,5 +1,5 @@
 Feature: ThisHeart Account Page
-
+@test-addAccount
   Scenario: User can add a new account
     Given I am on dashboard page
     Then I click on account link

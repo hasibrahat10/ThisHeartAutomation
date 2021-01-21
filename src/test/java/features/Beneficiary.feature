@@ -1,5 +1,5 @@
 Feature: ThisHeart beneficiary page
-
+  @test-addBeneficiary
   Scenario: User can add a new beneficiary
     Given I am on dashboard page
     Then I click on beneficiary link

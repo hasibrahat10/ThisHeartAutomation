@@ -39,7 +39,7 @@ public class LoginSteps extends BasePage {
     @Then("Page title should be {string}")
     public void pageTitleShouldBe(String title) {
         sleepFor(2);
-        if (driver.getPageSource().contains("ThisHeart- Dashboard")) {
+        if (driver.getPageSource().contains(title)) {
 
             Assert.assertTrue(false);
         } else Assert.assertEquals(title, driver.getTitle());
