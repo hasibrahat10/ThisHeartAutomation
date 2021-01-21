@@ -19,6 +19,7 @@ public class DashboardSteps extends BasePage {
     @Then("I click on memories link")
     public void iClickOnMemoriesLink() {
         new DashboardPage().clickMemoriesLink();
+
     }
 
     @Then("I click on account link")

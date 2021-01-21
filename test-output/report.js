@@ -1,4 +1,128 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Account.feature");
+formatter.feature({
+  "name": "ThisHeart Account Page",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "User can add a new account",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I am on dashboard page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepDefinitions.DashboardSteps.iAmOnDashboardPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on account link",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.DashboardSteps.i_click_on_account_link()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on add new account",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.AccountSteps.i_click_on_add_new_account()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I fill up the form info and click on save button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.AccountSteps.i_fill_up_the_form_info_and_click_on_save_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/test/java/features/Beneficiary.feature");
+formatter.feature({
+  "name": "ThisHeart beneficiary page",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "User can add a new beneficiary",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I am on dashboard page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepDefinitions.DashboardSteps.iAmOnDashboardPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on beneficiary link",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.DashboardSteps.i_click_on_beneficiary_link()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on add beneficiary button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.BeneficiarySteps.i_click_on_add_beneficiary_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I enter the beneficiary form info and I click on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.BeneficiarySteps.i_enter_the_beneficiary_form_info_and_I_click_on_save_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Text displayed with \"BENEFICIARIES\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.BeneficiarySteps.textDisplayedWith(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/test/java/features/Login.feature");
 formatter.feature({
   "name": "Login ThisHeart",
   "description": "",
@@ -55,8 +179,65 @@ formatter.match({
   "location": "stepDefinitions.LoginSteps.pageTitleShouldBe(java.lang.String)"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepDefinitions.LoginSteps.pageTitleShouldBe(LoginSteps.java:44)\r\n\tat ✽.Page title should be \"ThisHeart- Dashboard\"(file:///F:/ThisHeartAutomation/src/test/java/features/Login.feature:8)\r\n",
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepDefinitions.LoginSteps.pageTitleShouldBe(LoginSteps.java:44)\r\n\tat ✽.Page title should be \"ThisHeart- Dashboard\"(file:///E:/ThisHeartAutomation/src/test/java/features/Login.feature:8)\r\n",
   "status": "failed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/test/java/features/Medical.feature");
+formatter.feature({
+  "name": "ThisHeart Medical page",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "User can add a medical info",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I am on dashboard page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepDefinitions.DashboardSteps.iAmOnDashboardPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on medical link",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.DashboardSteps.iClickOnMedicalLink()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on add new button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.MedicalSteps.i_click_on_add_new_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I select a medical info and click save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.MedicalSteps.i_select_a_medical_info_and_click_save_button()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
@@ -123,8 +304,7 @@ formatter.match({
   "location": "stepDefinitions.MemoriesSteps.i_fill_add_photo_form_and_click_upload_button()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\\Users\\rootnext\\Downloads\\scd1.png\n  (Session info: chrome\u003d87.0.4280.141)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-8IIG3HH\u0027, ip: \u0027192.168.0.103\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_241\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\\Users\\asus\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52645}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 3a9f075015a4534fc093c56478b23ce0\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy17.sendKeys(Unknown Source)\r\n\tat pages.MemoriesPage.uploadPhoto(MemoriesPage.java:103)\r\n\tat stepDefinitions.MemoriesSteps.i_fill_add_photo_form_and_click_upload_button(MemoriesSteps.java:19)\r\n\tat ✽.I fill add photo form and click upload button(file:///F:/ThisHeartAutomation/src/test/java/features/Memories.feature:10)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "I should see photo upload status 100%",
@@ -134,7 +314,7 @@ formatter.match({
   "location": "stepDefinitions.MemoriesSteps.iShouldSeePhotoUploadStatus(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
@@ -340,8 +520,7 @@ formatter.match({
   "location": "stepDefinitions.MemoriesSteps.iFillUpANewVideoFormUsingOption(java.lang.String)"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\\Users\\rootnext\\Downloads\\samplevideo.mp4\n  (Session info: chrome\u003d87.0.4280.141)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-8IIG3HH\u0027, ip: \u0027192.168.0.103\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_241\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\\Users\\asus\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 67dc8f8f8e9ee102461e75b0e83ddebd\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy17.sendKeys(Unknown Source)\r\n\tat pages.MemoriesPage.uploadVideo(MemoriesPage.java:166)\r\n\tat stepDefinitions.MemoriesSteps.iFillUpANewVideoFormUsingOption(MemoriesSteps.java:75)\r\n\tat ✽.I fill up a new video form using \"Local Storage\"(file:///F:/ThisHeartAutomation/src/test/java/features/Memories.feature:17)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "I should see video upload successful \"Url upload is success!\"",
@@ -351,7 +530,7 @@ formatter.match({
   "location": "stepDefinitions.MemoriesSteps.iShouldSeeVideoUploadSuccessful(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
