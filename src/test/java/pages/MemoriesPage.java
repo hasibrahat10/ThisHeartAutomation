@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import stepDefinitions.BasePage;
 
+import java.util.List;
+
 public class MemoriesPage extends BasePage {
 
     //Element Finder
@@ -24,6 +26,14 @@ public class MemoriesPage extends BasePage {
 
     @FindBy(xpath = "//span[@class = 'UploadItem_percentage__2BgDA']")
     WebElement uploadProgress;
+
+    //Deleting photos from the memories section
+
+    @FindBy(xpath =" //button[text()='X']")
+    List<WebElement> clickDelete;
+
+    @FindBy(xpath = " //button[text()='Delete' and @class='btn btn-danger']")
+    WebElement confirmDeletePhoto;
 
 
     // Element for Letter section
@@ -50,7 +60,6 @@ public class MemoriesPage extends BasePage {
 
     @FindBy(xpath = "//a[text()='Videos']")
     WebElement navVideos;
-
 
     @FindBy(xpath = "//button[text()='+Add New Videos']")
     WebElement addVideos;
@@ -80,6 +89,25 @@ public class MemoriesPage extends BasePage {
 
     @FindBy(xpath = "//button[text()='Save']")
     WebElement clickSaveURL;
+
+    // Element for the records section
+
+
+    @FindBy(xpath = "//a[text()='Recordings']")
+    WebElement navRecords;
+
+    @FindBy(xpath = "//button[text()='+Add New Record']")
+    WebElement addRecords;
+
+    @FindBy(xpath = "//input[@class='react-tagsinput-input']")
+    WebElement tagAudio;
+
+    @FindBy(xpath = "//input[@type='file']")
+    WebElement chooseAudio;
+
+    @FindBy(xpath = "//span[@class = 'UploadItem_percentage__2BgDA']")
+    WebElement uploadProgressAudio;
+
 
 
     //Define constructor
@@ -177,9 +205,9 @@ public class MemoriesPage extends BasePage {
 
     public boolean getVideoUploadProgress(String status) {
         sleepFor(3);
-        if (driver.findElements(By.xpath("//*[contains(text(),"+ status +")]")).size() > 0) {
+        if (driver.findElements(By.xpath("//*[contains(text()," + status + ")]")).size() > 0) {
             return true;
-        } else return driver.findElements(By.xpath("//*[contains(text(),"+ status +")]")).size() > 0;
+        } else return driver.findElements(By.xpath("//*[contains(text()," + status + ")]")).size() > 0;
     }
 
 
@@ -194,6 +222,39 @@ public class MemoriesPage extends BasePage {
 
     public void clickUrlSaveButton() {
         clickSaveURL.click();
+    }
+
+    public void clickRecordingsNavLink(){
+        navRecords.click();
+    }
+
+    public void clickAddNewRecord(){
+        addRecords.click();
+    }
+
+    public void fillAudioInfo(){
+        tagAudio.clear();
+        tagAudio.sendKeys("SampleAudio");
+        sleepFor(2);
+        chooseAudio.sendKeys("C:\\Users\\rootnext\\Downloads\\mp700kb.mp3");
+
+    }
+
+    public String getUploadProgressAudio() {
+        sleepFor(10);
+        return uploadProgressAudio.getText();
+    }
+
+    public void clickPhotoDelete(){
+        sleepFor(15);
+     clickDelete.get(5).click();
+    }
+
+    public void confirmDelete(){
+        sleepFor(3);
+        confirmDeletePhoto.click();
+        sleepFor(3);
+
     }
 
 }

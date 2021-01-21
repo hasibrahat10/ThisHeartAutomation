@@ -3,6 +3,7 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import pages.MedicalPage;
 import pages.MemoriesPage;
 
 public class MemoriesSteps extends BasePage {
@@ -71,12 +72,50 @@ public class MemoriesSteps extends BasePage {
     @And("I fill up a new video form using {string}")
     public void iFillUpANewVideoFormUsingOption(String storage) {
         MemoriesPage memoriesPage = new MemoriesPage();
-        memoriesPage.enterLetterTag();
+        memoriesPage.enterVideoTag();
         memoriesPage.uploadVideo(storage);
     }
 
     @Then("I should see video upload successful {string}")
     public void iShouldSeeVideoUploadSuccessful(String status) {
 //        Assert.assertTrue(new MemoriesPage().getVideoUploadProgress(status));
+    }
+
+    @Then("I click on recordings nav link")
+    public void iClickOnRecordingsNavLink() {
+        new MemoriesPage().clickRecordingsNavLink();
+    }
+
+    @And("I click on add new record")
+    public void iClickOnAddNewRecord() {
+        new MemoriesPage().clickAddNewRecord();
+    }
+
+    @And("I fill up the audio form")
+    public void iFillUpTheAudioForm() {
+        MemoriesPage memoriesPage = new MemoriesPage();
+        memoriesPage.fillAudioInfo();
+    }
+
+    @Then("I should see audio upload status {int}%")
+    public void iShouldSeeAudioUploadStatus(int statusProgress) {
+        Assert.assertEquals(statusProgress + "%", new MemoriesPage().getUploadProgressAudio());
+    }
+
+
+
+    @Then("I click on an item")
+    public void iClickOnAnItem() {
+        new MemoriesPage().clickPhotoDelete();
+    }
+
+    @Then("I confirm the delete button")
+    public void iConfirmTheDeleteButton() {
+        new MemoriesPage().confirmDelete();
+    }
+
+    @Then("I see the success message {string}")
+    public void iSeeTheSuccessMessage(String arg0) {
+
     }
 }

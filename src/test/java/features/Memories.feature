@@ -28,6 +28,22 @@ Feature: ThisHeart Memories Page
     And I click on add new letter button
     And I fill add letter form and click save button
 
+    @test-addAudio
+    Scenario: User can add an audio in memories page
+    Then I click on recordings nav link
+    And I click on add new record
+    And I fill up the audio form
+    Then I should see audio upload status 100%
+
+    @test-deletePhoto
+    Scenario: I want to delete a photo
+      Then I click on an item
+      Then I confirm the delete button
+      Then I see the success message "Image has been deleted successfully!" 
+
+
+
+
 
 
 

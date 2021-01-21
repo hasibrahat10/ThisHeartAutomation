@@ -1,6 +1,7 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import pages.AccountPage;
 
 public class AccountSteps extends BasePage {

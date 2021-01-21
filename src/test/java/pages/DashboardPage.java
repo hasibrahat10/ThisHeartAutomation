@@ -15,6 +15,12 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//a[text()='Accounts']")
     WebElement accountLink;
 
+    @FindBy(xpath = "//a[text()='Medical']")
+    WebElement medicalLink;
+
+    @FindBy(xpath = "//div/ul[@class='menu-list']/li/a[text()='Beneficiaries']")
+    WebElement beneficiaryLink;
+
 
     public DashboardPage() {
 
@@ -33,6 +39,13 @@ public class DashboardPage extends BasePage {
         accountLink.click();
     }
 
+    public void clickMedicalLink() {
+        medicalLink.click();
+    }
+
+    public void clickBeneficiaryLink() {
+        beneficiaryLink.click();
+    }
 
 
 }
