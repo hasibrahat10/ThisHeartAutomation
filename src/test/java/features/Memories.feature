@@ -28,6 +28,26 @@ Feature: ThisHeart Memories Page
     And I click on add new letter button
     And I fill add letter form and click save button
 
+  @test-viewLetter
+  Scenario: User can view a letter from the list
+    Then I click on letter nav link
+    Then I click on view button and click close button
+
+
+  @test-editLetter
+  Scenario: User can edit a letter in memories
+    Then I click on letter nav link
+    And I click on edit button
+    Then I enter the edit letter info
+    And I click on save changes button.
+
+  @test-searchLetter
+  Scenario: User can search a letter item
+    Then I click on letter nav link
+    And I enter the search text as "worry" in the search box
+    And Search result will be "worry"
+
+
   @test-addAudio
   Scenario: User can add an audio in memories page
     Then I click on recordings nav link

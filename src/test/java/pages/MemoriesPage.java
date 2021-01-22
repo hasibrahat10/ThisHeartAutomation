@@ -55,6 +55,30 @@ public class MemoriesPage extends BasePage {
     @FindBy(xpath = "//button[text()='Save']")
     WebElement btnSaveLetter;
 
+    //Edit & View a letter in the memories page
+
+    @FindBy(xpath = "//button[text()='Edit']")
+    List<WebElement> clickEdit;
+
+    @FindBy(id = "subj")
+    WebElement editSubj;
+
+    @FindBy(xpath = "//input[@class='react-tagsinput-input']")
+    WebElement editTag;
+
+    @FindBy(xpath = "//div[@class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']")
+    WebElement editDescription;
+
+    @FindBy(xpath = "//button[text()='Save changes']")
+    WebElement clickSaveChanges;
+
+    @FindBy(xpath = "//button[text()='View']")
+    List<WebElement> clickViewLetter;
+
+    @FindBy(xpath = "//button[text()='Close']")
+    WebElement closeLetter;
+
+
     //Delete letter from the memories
 
     @FindBy(xpath = "//button[@class='btn-control-delete']")
@@ -62,6 +86,12 @@ public class MemoriesPage extends BasePage {
 
     @FindBy(xpath = " //button[text()='Delete' and @class='btn btn-danger']")
     WebElement confirmDeleteLetter;
+
+    @FindBy(id = "search_txt")
+    WebElement searchText;
+
+    @FindBy(xpath = "//div[@class='row list-letter']")
+    List<WebElement> srcResult;
 
 
     // Element for video section
@@ -192,6 +222,7 @@ public class MemoriesPage extends BasePage {
 
     public void clickOnSaveButton() {
         btnSaveLetter.click();
+        sleepFor(5);
     }
 
     //Custom method declare for Memories Page video
@@ -315,5 +346,49 @@ public class MemoriesPage extends BasePage {
         sleepFor(3);
     }
 
+    public void clickEditLetter() {
+        clickEdit.get(1).click();
+    }
+
+    public void editLetterInfo() {
+        editSubj.clear();
+        editSubj.sendKeys("Subject Edit");
+
+        editTag.clear();
+        editTag.sendKeys("letterEdit");
+
+        editDescription.clear();
+        editDescription.sendKeys("Description edited by automatic call,no need to worry");
+        sleepFor(5);
+    }
+
+    public void clickSaveButton() {
+        clickSaveChanges.click();
+        sleepFor(5);
+    }
+
+
+    public void letterView() {
+        sleepFor(2);
+        clickViewLetter.get(1).click();
+        sleepFor(10);
+        closeLetter.click();
+    }
+
+
+    public void searchText(String text) {
+        sleepFor(5);
+        searchText.clear();
+        searchText.sendKeys(text);
+    }
+
+    public String searchResultDisplay() {
+        String results = srcResult.get(0).getText();
+        sleepFor(3);
+        for (WebElement webElement : srcResult) {
+        }
+
+        return results;
+    }
 
 }

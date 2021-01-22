@@ -44,7 +44,7 @@ public class MemoriesSteps extends BasePage {
     public void iFillAddLetterFormAndClickSaveButton() {
         MemoriesPage memories = new MemoriesPage();
         memories.enterSubjectLetter();
-        memories.enterTag();
+        memories.enterLetterTag();
         memories.enterDescription();
         sleepFor(2);
         memories.clickOnSaveButton();
@@ -146,4 +146,38 @@ public class MemoriesSteps extends BasePage {
     public void iConfirmTheRecordDeleteButton() {
         new MemoriesPage().deleteRecordConfirm();
     }
+
+    @And("I click on edit button")
+    public void iClickOnEditButton() {
+        new MemoriesPage().clickEditLetter();
+
+    }
+
+    @Then("I enter the edit letter info")
+    public void iEnterTheEditLetterInfo() {
+        new MemoriesPage().editLetterInfo();
+    }
+
+    @And("I click on save changes button.")
+    public void iClickOnSaveChangesButton() {
+        new MemoriesPage().clickSaveButton();
+    }
+
+
+    @Then("I click on view button and click close button")
+    public void iClickOnViewButtonAndClickCloseButton() {
+        new MemoriesPage().letterView();
+    }
+
+
+    @And("I enter the search text as {string} in the search box")
+    public void iEnterTheSearchTextAsInTheSearchBox(String givenText) {
+        new MemoriesPage().searchText(givenText);
+    }
+
+    @And("Search result will be {string}")
+    public void searchResultWillBe(String searchResult) {
+        Assert.assertEquals(searchResult, new MemoriesPage().searchResultDisplay());
+    }
+
 }
