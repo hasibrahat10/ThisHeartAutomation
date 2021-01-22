@@ -28,22 +28,45 @@ Feature: ThisHeart Memories Page
     And I click on add new letter button
     And I fill add letter form and click save button
 
-    @test-addAudio
-    Scenario: User can add an audio in memories page
+  @test-addAudio
+  Scenario: User can add an audio in memories page
     Then I click on recordings nav link
     And I click on add new record
     And I fill up the audio form
     Then I should see audio upload status 100%
 
-    @test-deletePhoto
-    Scenario: I want to delete a photo
-      Then I click on an item
-      Then I confirm the delete button
-      Then I see the success message "Image has been deleted successfully!"
+  @test-deletePhoto
+  Scenario: I want to delete a photo
+    Then I click on an item
+    Then I confirm the delete button
+    Then I see the success message "Image has been deleted successfully!"
 
-      @test-deleteVideo
-      Scenario: I want to delete a video
-        Then I click videos nav link
+  @test-deleteVideo
+  Scenario: I want to delete a video
+    Then I click videos nav link
+    Then I click on a video item
+    Then I confirm the video delete button
+
+  @test-deleteLetter
+  Scenario: I want to delete a letter item
+    Then I click on letter nav link
+    Then I click on a letter item
+    Then I confirm the letter delete button
+
+
+  @test-deleteRecord
+  Scenario: I want to delete a record item
+    Then I click on recordings nav link
+    Then I click on a record item
+    Then I confirm the record delete button
+
+
+
+
+
+
+
+
 
 
 

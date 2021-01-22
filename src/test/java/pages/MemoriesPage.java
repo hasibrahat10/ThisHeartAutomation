@@ -29,7 +29,7 @@ public class MemoriesPage extends BasePage {
 
     //Deleting photos from the memories section
 
-    @FindBy(xpath =" //button[text()='X']")
+    @FindBy(xpath = " //button[text()='X']")
     List<WebElement> clickDelete;
 
     @FindBy(xpath = " //button[text()='Delete' and @class='btn btn-danger']")
@@ -54,6 +54,14 @@ public class MemoriesPage extends BasePage {
 
     @FindBy(xpath = "//button[text()='Save']")
     WebElement btnSaveLetter;
+
+    //Delete letter from the memories
+
+    @FindBy(xpath = "//button[@class='btn-control-delete']")
+    List<WebElement> clickLetterDel;
+
+    @FindBy(xpath = " //button[text()='Delete' and @class='btn btn-danger']")
+    WebElement confirmDeleteLetter;
 
 
     // Element for video section
@@ -90,6 +98,15 @@ public class MemoriesPage extends BasePage {
     @FindBy(xpath = "//button[text()='Save']")
     WebElement clickSaveURL;
 
+
+    //Delete video from the memories
+
+    @FindBy(xpath = "//button[@class='textvideos']")
+    List<WebElement> clickVidDel;
+
+    @FindBy(xpath = " //button[text()='Delete' and @class='btn btn-danger']")
+    WebElement confirmDeleteVideo;
+
     // Element for the records section
 
 
@@ -108,6 +125,13 @@ public class MemoriesPage extends BasePage {
     @FindBy(xpath = "//span[@class = 'UploadItem_percentage__2BgDA']")
     WebElement uploadProgressAudio;
 
+    //Delete record from the memories
+
+    @FindBy(xpath = "//button[@class='textrecord']")
+    List<WebElement> clickRecordDel;
+
+    @FindBy(xpath = " //button[text()='Delete' and @class='btn btn-danger']")
+    WebElement confirmDeleteRecord;
 
 
     //Define constructor
@@ -224,15 +248,15 @@ public class MemoriesPage extends BasePage {
         clickSaveURL.click();
     }
 
-    public void clickRecordingsNavLink(){
+    public void clickRecordingsNavLink() {
         navRecords.click();
     }
 
-    public void clickAddNewRecord(){
+    public void clickAddNewRecord() {
         addRecords.click();
     }
 
-    public void fillAudioInfo(){
+    public void fillAudioInfo() {
         tagAudio.clear();
         tagAudio.sendKeys("SampleAudio");
         sleepFor(2);
@@ -245,16 +269,51 @@ public class MemoriesPage extends BasePage {
         return uploadProgressAudio.getText();
     }
 
-    public void clickPhotoDelete(){
+    public void clickPhotoDelete() {
         sleepFor(15);
-     clickDelete.get(5).click();
+        clickDelete.get(5).click();
     }
 
-    public void confirmDelete(){
+    public void confirmDelete() {
         sleepFor(3);
         confirmDeletePhoto.click();
         sleepFor(3);
 
     }
+
+
+    public void clickVideoDelete() {
+        sleepFor(15);
+        clickVidDel.get(1).click();
+    }
+
+    public void deleteVideoConfirm() {
+        sleepFor(3);
+        confirmDeleteVideo.click();
+        sleepFor(3);
+    }
+
+    public void clickLetterDelete() {
+        sleepFor(5);
+        clickLetterDel.get(1).click();
+    }
+
+    public void deleteLetterConfirm() {
+        sleepFor(3);
+        confirmDeleteLetter.click();
+        sleepFor(3);
+    }
+
+    public void clickRecordDelete() {
+        sleepFor(5);
+        clickRecordDel.get(1).click();
+    }
+
+    public void deleteRecordConfirm() {
+        sleepFor(3);
+        confirmDeleteRecord.click();
+        sleepFor(3);
+    }
+
 
 }

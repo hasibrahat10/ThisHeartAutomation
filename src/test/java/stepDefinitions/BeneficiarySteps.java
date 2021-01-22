@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.BeneficiaryPage;
@@ -22,10 +23,20 @@ public class BeneficiarySteps extends BasePage {
     }
 
 
-
     @Then("Text displayed with {string}")
     public void textDisplayedWith(String expectedText) {
         sleepFor(5);
         Assert.assertEquals(expectedText, new BeneficiaryPage().checkTextDisplay());
+    }
+
+    @And("I click on beneficiary delete button")
+    public void iClickOnBeneficiaryDeleteButton() {
+        new BeneficiaryPage().beneficiaryDelete();
+    }
+
+    @And("I confirm the beneficiary delete item")
+    public void iConfirmTheBeneficiaryDeleteItem() {
+        new BeneficiaryPage().beneficiaryDeleteConfirm();
+
     }
 }

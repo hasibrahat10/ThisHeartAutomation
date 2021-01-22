@@ -1,8 +1,10 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.AccountPage;
+import pages.MedicalPage;
 
 public class AccountSteps extends BasePage {
 
@@ -17,5 +19,25 @@ public class AccountSteps extends BasePage {
         AccountPage accountPage = new AccountPage();
         accountPage.enterFormInfo();
         accountPage.clickOnSaveButton();
+    }
+
+    @Then("I click on delete button")
+    public void iClickOnDeleteButton() {
+        new AccountPage().clickAccDelete();
+    }
+
+    @And("I confirm the account delete button")
+    public void iConfirmTheAccountDeleteButton() {
+        new AccountPage().confirmAccDelete();
+    }
+
+    @Then("I click on remove link")
+    public void iClickOnRemoveLink() {
+        new MedicalPage().clickRemoveItem();
+    }
+
+    @And("I confirm the delete medical item")
+    public void iConfirmTheDeleteMedicalItem() {
+        new MedicalPage().confirmDeleteMedicItem();
     }
 }

@@ -3,7 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.MedicalPage;
 import pages.MemoriesPage;
 
 public class MemoriesSteps extends BasePage {
@@ -103,7 +102,6 @@ public class MemoriesSteps extends BasePage {
     }
 
 
-
     @Then("I click on an item")
     public void iClickOnAnItem() {
         new MemoriesPage().clickPhotoDelete();
@@ -117,5 +115,35 @@ public class MemoriesSteps extends BasePage {
     @Then("I see the success message {string}")
     public void iSeeTheSuccessMessage(String arg0) {
 
+    }
+
+    @Then("I click on a video item")
+    public void iClickOnAVideoItem() {
+        new MemoriesPage().clickVideoDelete();
+    }
+
+    @Then("I confirm the video delete button")
+    public void iConfirmTheVideoDeleteButton() {
+        new MemoriesPage().deleteVideoConfirm();
+    }
+
+    @Then("I click on a letter item")
+    public void iClickOnALetterItem() {
+        new MemoriesPage().clickLetterDelete();
+    }
+
+    @Then("I confirm the letter delete button")
+    public void iConfirmTheLetterDeleteButton() {
+        new MemoriesPage().deleteLetterConfirm();
+    }
+
+    @Then("I click on a record item")
+    public void iClickOnARecordItem() {
+        new MemoriesPage().clickRecordDelete();
+    }
+
+    @Then("I confirm the record delete button")
+    public void iConfirmTheRecordDeleteButton() {
+        new MemoriesPage().deleteRecordConfirm();
     }
 }

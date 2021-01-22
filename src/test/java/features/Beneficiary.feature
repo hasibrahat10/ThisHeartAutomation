@@ -1,11 +1,21 @@
 Feature: ThisHeart beneficiary page
+
+  Background:
+    Given I am on dashboard page
+    And I click on beneficiary link
+
   @test-addBeneficiary
   Scenario: User can add a new beneficiary
-    Given I am on dashboard page
-    Then I click on beneficiary link
     And I click on add beneficiary button
     And I enter the beneficiary form info and I click on save button
     Then Text displayed with "BENEFICIARIES"
+
+
+  @test-deleteBeneficiary
+  Scenario: User can delete a beneficiary
+    And I click on beneficiary delete button
+    And I confirm the beneficiary delete item
+
 
 
 
