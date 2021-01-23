@@ -3,7 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.MedicalPage;
 import pages.MemoriesPage;
 
 public class MemoriesSteps extends BasePage {
@@ -45,7 +44,7 @@ public class MemoriesSteps extends BasePage {
     public void iFillAddLetterFormAndClickSaveButton() {
         MemoriesPage memories = new MemoriesPage();
         memories.enterSubjectLetter();
-        memories.enterTag();
+        memories.enterLetterTag();
         memories.enterDescription();
         sleepFor(2);
         memories.clickOnSaveButton();
@@ -103,7 +102,6 @@ public class MemoriesSteps extends BasePage {
     }
 
 
-
     @Then("I click on an item")
     public void iClickOnAnItem() {
         new MemoriesPage().clickPhotoDelete();
@@ -118,4 +116,68 @@ public class MemoriesSteps extends BasePage {
     public void iSeeTheSuccessMessage(String arg0) {
 
     }
+
+    @Then("I click on a video item")
+    public void iClickOnAVideoItem() {
+        new MemoriesPage().clickVideoDelete();
+    }
+
+    @Then("I confirm the video delete button")
+    public void iConfirmTheVideoDeleteButton() {
+        new MemoriesPage().deleteVideoConfirm();
+    }
+
+    @Then("I click on a letter item")
+    public void iClickOnALetterItem() {
+        new MemoriesPage().clickLetterDelete();
+    }
+
+    @Then("I confirm the letter delete button")
+    public void iConfirmTheLetterDeleteButton() {
+        new MemoriesPage().deleteLetterConfirm();
+    }
+
+    @Then("I click on a record item")
+    public void iClickOnARecordItem() {
+        new MemoriesPage().clickRecordDelete();
+    }
+
+    @Then("I confirm the record delete button")
+    public void iConfirmTheRecordDeleteButton() {
+        new MemoriesPage().deleteRecordConfirm();
+    }
+
+    @And("I click on edit button")
+    public void iClickOnEditButton() {
+        new MemoriesPage().clickEditLetter();
+
+    }
+
+    @Then("I enter the edit letter info")
+    public void iEnterTheEditLetterInfo() {
+        new MemoriesPage().editLetterInfo();
+    }
+
+    @And("I click on save changes button.")
+    public void iClickOnSaveChangesButton() {
+        new MemoriesPage().clickSaveButton();
+    }
+
+
+    @Then("I click on view button and click close button")
+    public void iClickOnViewButtonAndClickCloseButton() {
+        new MemoriesPage().letterView();
+    }
+
+
+    @And("I enter the search text as {string} in the search box")
+    public void iEnterTheSearchTextAsInTheSearchBox(String givenText) {
+        new MemoriesPage().searchText(givenText);
+    }
+
+    @And("Search result will be {string}")
+    public void searchResultWillBe(String searchResult) {
+        Assert.assertEquals(searchResult, new MemoriesPage().searchResultDisplay());
+    }
+
 }

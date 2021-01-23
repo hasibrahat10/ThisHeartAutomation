@@ -6,11 +6,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import stepDefinitions.BasePage;
 
+import java.util.List;
+
 public class AccountPage extends BasePage {
     @FindBy(xpath = "//button[text()='+ Add Account']")
     WebElement addAccountBtn;
 
-    //Find Elements for account page
+    //Find Elements for account page - Add Account
     @FindBy(id = "accName")
     WebElement accName;
     @FindBy(id = "accountType")
@@ -26,10 +28,22 @@ public class AccountPage extends BasePage {
     @FindBy(xpath = "//button[text()='Save']")
     WebElement accSaveBtn;
 
+    // Delete Account from the list
+    @FindBy(xpath = "//div[text()='Delete']")
+    List<WebElement> accDelete;
+
+    @FindBy(xpath = "//button[text()='Delete' and @class='btn btn-danger']")
+    WebElement confirmAccDel;
+
+    // Element find to Edit Account from the list
+
+
+    // Define constructor
     public AccountPage() {
 
         PageFactory.initElements(driver, this);
     }
+// Custom method declare for the account steps
 
     public void clickAddNewAccountBtn() {
         addAccountBtn.click();
@@ -58,6 +72,17 @@ public class AccountPage extends BasePage {
 
     public void clickOnSaveButton() {
         accSaveBtn.click();
+        sleepFor(3);
+    }
+
+    public void clickAccDelete() {
+        sleepFor(3);
+        accDelete.get(1).click();
+    }
+
+    public void confirmAccDelete() {
+        sleepFor(2);
+        confirmAccDel.click();
         sleepFor(3);
     }
 

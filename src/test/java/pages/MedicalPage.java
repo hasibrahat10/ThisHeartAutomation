@@ -10,7 +10,7 @@ import java.util.List;
 public class MedicalPage extends BasePage {
 
 
-    // Find elements for the medical page
+    // Find elements for the medical page - Add Medical info
 
     @FindBy(xpath = "//div[@class='card-title' and text()='ME']/following::button")
     WebElement addMedical;
@@ -24,6 +24,16 @@ public class MedicalPage extends BasePage {
     @FindBy(xpath = "//button[text()='Save Items']")
     WebElement saveMedicalItem;
 
+    // Delete or Remove medical info element
+
+    @FindBy(xpath = "//div/a[text()='remove']")
+    List<WebElement> clickRemove;
+
+    @FindBy(xpath = "//button[text()='Delete' and @class='btn btn-danger']")
+    WebElement confirmMedDelete;
+
+
+//Define constructor
 
     public MedicalPage() {
         PageFactory.initElements(driver, this);
@@ -50,6 +60,16 @@ public class MedicalPage extends BasePage {
 
     public void clickSaveItemMedical() {
         saveMedicalItem.click();
+    }
+
+    public void clickRemoveItem() {
+        sleepFor(3);
+        clickRemove.get(1).click();
+    }
+
+    public void confirmDeleteMedicItem() {
+        sleepFor(3);
+        confirmMedDelete.click();
     }
 
 }

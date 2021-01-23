@@ -5,8 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import stepDefinitions.BasePage;
 
+import java.util.List;
+
 public class BeneficiaryPage extends BasePage {
-    //Find elements for the beneficiary page
+    //Find elements for the beneficiary page - ADD beneficiary
     @FindBy(xpath = "//button[text()='+ Add Beneficiary']")
     WebElement addBeneficiary;
     @FindBy(id = "firstname")
@@ -32,6 +34,15 @@ public class BeneficiaryPage extends BasePage {
     @FindBy(xpath = "//h1[text()='BENEFICIARIES']")
     WebElement expectedText;
 
+    // Delete beneficiary
+    @FindBy(xpath = "//div[text()='Delete']")
+    List<WebElement> clickBeneficiaryDelete;
+
+    @FindBy(xpath = "//button[text()='Delete' and @class='btn btn-danger']")
+    WebElement confirmBeneficiaryDelete;
+
+
+    //Define constructor
     public BeneficiaryPage() {
         PageFactory.initElements(driver, this);
 
@@ -84,6 +95,16 @@ public class BeneficiaryPage extends BasePage {
         return expectedText.getText();
     }
 
+    public void beneficiaryDelete() {
+        sleepFor(4);
+        clickBeneficiaryDelete.get(0).click();
+    }
+
+    public void beneficiaryDeleteConfirm() {
+        sleepFor(2);
+        confirmBeneficiaryDelete.click();
+        sleepFor(3);
+    }
 
 
 }
