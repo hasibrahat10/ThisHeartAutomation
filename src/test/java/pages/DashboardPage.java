@@ -21,7 +21,23 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//div/ul[@class='menu-list']/li/a[text()='Beneficiaries']")
     WebElement beneficiaryLink;
 
+    // Search from the Dashboard page
 
+    @FindBy(xpath = "//button[text()='Search']")
+    WebElement btnDashSearch;
+
+    @FindBy(xpath = "//button[text()='By name']")
+    WebElement clickByName;
+
+    @FindBy(xpath = "//button[text()='Memories']")
+    WebElement clickMemories;
+
+    @FindBy(xpath = "//button[@class='btn-src btn btn-secondary']")
+    WebElement searchBtnRes;
+
+
+
+//Define constructor
     public DashboardPage() {
 
         PageFactory.initElements(driver, this);
@@ -46,6 +62,26 @@ public class DashboardPage extends BasePage {
     public void clickBeneficiaryLink() {
         beneficiaryLink.click();
     }
+
+    public void btnDashboardSearchClick(){
+        sleepFor(5);
+        btnDashSearch.click();
+    }
+
+    public void filterItemMem(){
+        clickByName.click();
+        sleepFor(2);
+        clickMemories.click();
+        sleepFor(3);
+
+    }
+
+    public void searchResultMemory(){
+        searchBtnRes.click();
+        sleepFor(5);
+    }
+
+
 
 
 }

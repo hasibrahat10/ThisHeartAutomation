@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.DashboardPage;
@@ -36,5 +37,22 @@ public class DashboardSteps extends BasePage {
     @Then("I click on beneficiary link")
     public void i_click_on_beneficiary_link() {
         new DashboardPage().clickBeneficiaryLink();
+    }
+
+
+
+    @Then("I click on search button")
+    public void iClickOnSearchButton() {
+        new DashboardPage().btnDashboardSearchClick();
+    }
+
+    @Then("I click on click by name and click on memories item")
+    public void iClickOnClickByNameAndClickOnMemoriesItem() {
+        new DashboardPage().filterItemMem();
+    }
+
+    @And("I click on search button see the list")
+    public void iClickOnSearchButtonSeeTheList() {
+        new DashboardPage().searchResultMemory();
     }
 }
