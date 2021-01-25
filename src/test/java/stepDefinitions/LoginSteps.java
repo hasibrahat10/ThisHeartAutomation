@@ -1,8 +1,12 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import jdk.internal.instrumentation.Logger;
 import org.junit.Assert;
 import pages.LoginPage;
+import pages.UpdateProfilePage;
 
 public class LoginSteps extends BasePage {
 
@@ -25,6 +29,7 @@ public class LoginSteps extends BasePage {
 
     @Then("Click on login")
     public void click_on_login() {
+
         new LoginPage().clickLogin();
 
     }
@@ -39,10 +44,34 @@ public class LoginSteps extends BasePage {
     @Then("Page title should be {string}")
     public void pageTitleShouldBe(String title) {
         sleepFor(2);
-        if (driver.getPageSource().contains(title)) {
+        if (driver.getPageSource().contains("Sorry, that didn’t work. Please try again")) {
 
             Assert.assertTrue(false);
         } else Assert.assertEquals(title, driver.getTitle());
+
+    }
+
+    @Then("User enter Email as {string} and Password as {string}")
+    public void userEnterEmailAsAndPasswordAs(String email, String password) {
+        new LoginPage().loginInfo(email, password);
+
+    }
+
+    @Then("Click on profile name")
+    public void clickOnProfileName() {
+        new UpdateProfilePage().clickProfileName();
+    }
+
+    @When("User click on Log out link")
+    public void userClickOnLogOutLink() {
+        new LoginPage().clickLogoutBtn();
+
+    }
+
+    @And("Confirm the logout")
+    public void confirmTheLogout() {
+        new LoginPage().confirmLogOut();
+
 
     }
 }

@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -12,6 +13,7 @@ public class BasePage {
     public static WebDriver driver;
 
     public void startDriver() {
+
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--ignore-certificate-errors");
         System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir") + "/drivers/chromedriver_win32/chromedriver.exe");
@@ -19,6 +21,7 @@ public class BasePage {
         System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
         Logger.getLogger("").setLevel(Level.OFF);
         driver = new ChromeDriver(chromeOptions);
+
     }
 
 
@@ -36,4 +39,12 @@ public class BasePage {
             e.printStackTrace();
         }
     }
+
+    //Created for generating random string for unique email
+    public static String randomString(){
+        String generatedString = RandomStringUtils.randomAlphabetic(5);
+        return (generatedString);
+    }
+
+
 }
