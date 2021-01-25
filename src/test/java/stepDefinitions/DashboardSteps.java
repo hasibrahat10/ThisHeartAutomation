@@ -40,7 +40,6 @@ public class DashboardSteps extends BasePage {
     }
 
 
-
     @Then("I click on search button")
     public void iClickOnSearchButton() {
         new DashboardPage().btnDashboardSearchClick();
@@ -54,5 +53,15 @@ public class DashboardSteps extends BasePage {
     @And("I click on search button see the list")
     public void iClickOnSearchButtonSeeTheList() {
         new DashboardPage().searchResultMemory();
+    }
+
+    @Then("I click on all search button")
+    public void iClickOnAllSearchButton() {
+        new DashboardPage().clickAllSearchItem();
+    }
+
+    @And("I click on search button see all list")
+    public void iClickOnSearchButtonSeeAllList() {
+        new DashboardPage().allSearchResult();
     }
 }

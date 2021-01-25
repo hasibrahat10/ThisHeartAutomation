@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MemoriesPage extends BasePage {
 
-    //Element Finder
+    //Element Finder for Photos section
 
     @FindBy(xpath = "//button[text()='+Add New Photo']")
     WebElement addPhotoBtn;
