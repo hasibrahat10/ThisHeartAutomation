@@ -40,7 +40,6 @@ public class DashboardSteps extends BasePage {
     }
 
 
-
     @Then("I click on search button")
     public void iClickOnSearchButton() {
         new DashboardPage().btnDashboardSearchClick();

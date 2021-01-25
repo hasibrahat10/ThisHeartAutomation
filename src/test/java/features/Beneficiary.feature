@@ -16,6 +16,11 @@ Feature: ThisHeart beneficiary page
     And I click on beneficiary delete button
     And I confirm the beneficiary delete item
 
+  @test-editBeneficiary
+  Scenario: User can edit a beneficiary
+    And I click on edit beneficiary button
+    Then I enter the beneficiary edit form info
+    Then I click on save changes button
 
 
 

@@ -1,5 +1,6 @@
 package pages;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -35,13 +36,21 @@ public class RegistrationPage extends BasePage {
         createBtn.click();
     }
 
-    public void userInfo() {
+    public void setEmailID(String email){
+
         emailID.clear();
-        emailID.sendKeys("buynoirtest@yopmail.com");
+        emailID.sendKeys(email);
+    }
+
+    public void setFullName(String fName){
+
         fullName.clear();
-        fullName.sendKeys("Hasib Rahat");
+        fullName.sendKeys(fName);
+    }
+
+    public void setUserPass(String pass) {
         userPass.clear();
-        userPass.sendKeys("hasib12345;;");
+        userPass.sendKeys(pass);
         sleepFor(3);
     }
 

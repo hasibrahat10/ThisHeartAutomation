@@ -36,8 +36,7 @@ public class DashboardPage extends BasePage {
     WebElement searchBtnRes;
 
 
-
-//Define constructor
+    //Define constructor
     public DashboardPage() {
 
         PageFactory.initElements(driver, this);
@@ -63,12 +62,12 @@ public class DashboardPage extends BasePage {
         beneficiaryLink.click();
     }
 
-    public void btnDashboardSearchClick(){
+    public void btnDashboardSearchClick() {
         sleepFor(5);
         btnDashSearch.click();
     }
 
-    public void filterItemMem(){
+    public void filterItemMem() {
         clickByName.click();
         sleepFor(2);
         clickMemories.click();
@@ -76,12 +75,10 @@ public class DashboardPage extends BasePage {
 
     }
 
-    public void searchResultMemory(){
+    public void searchResultMemory() {
         searchBtnRes.click();
         sleepFor(5);
     }
-
-
 
 
 }

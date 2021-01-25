@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="413eb83b-7776-4408-8efd-a812dbc7b198" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/Dashboard.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helper/WaitHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/Beneficiary.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Beneficiary.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/Dashboard.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Dashboard.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BeneficiaryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BeneficiaryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/BeneficiarySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BeneficiarySteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/DashboardSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/DashboardSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testRunner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testRunner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/RegisterSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/RegisterSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/BeneficiaryPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/BeneficiaryPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/DashboardPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/DashboardPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/BeneficiarySteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/BeneficiarySteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/DashboardSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/DashboardSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/LoginSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/LoginSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/RegisterSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/RegisterSteps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +63,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/stepDefinitions" />
-    <property name="settings.editor.selected.configurable" value="project.scopes" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\ThisHeartAutomation" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber java.Scenario: User able to search memory items">
-    <configuration name="Scenario: User able to search memory items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber java.Scenario: Login with valid credentials">
+    <configuration name="Scenario: Login Data Driven" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Dashboard.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Login.feature" />
       <option name="GLUE" value="stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="ThisHeartAutomation" />
-      <option name="NAME_FILTER" value="^User able to search memory items$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User able to search memory items$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: User able to search memory items" />
+      <option name="NAME_FILTER" value="^Login Data Driven$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Login Data Driven$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login Data Driven" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.cucumber.core.cli.*" />
@@ -72,15 +90,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: User can add a letter in memories page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Login with valid credentials" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Memories.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Login.feature" />
       <option name="GLUE" value="stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="ThisHeartAutomation" />
-      <option name="NAME_FILTER" value="^User can add a letter in memories page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User can add a letter in memories page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: User can add a letter in memories page" />
+      <option name="NAME_FILTER" value="^Login with valid credentials$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Login with valid credentials$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login with valid credentials" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.cucumber.core.cli.*" />
@@ -91,15 +109,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: User can edit a letter in memories" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Register a valid user with info" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Memories.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Registration.feature" />
       <option name="GLUE" value="stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="ThisHeartAutomation" />
-      <option name="NAME_FILTER" value="^User can edit a letter in memories$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User can edit a letter in memories$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: User can edit a letter in memories" />
+      <option name="NAME_FILTER" value="^Register a valid user with info$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Register a valid user with info$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Register a valid user with info" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.cucumber.core.cli.*" />
@@ -110,15 +128,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: User can search a letter item" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: User can edit a beneficiary" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Memories.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Beneficiary.feature" />
       <option name="GLUE" value="stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="ThisHeartAutomation" />
-      <option name="NAME_FILTER" value="^User can search a letter item$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User can search a letter item$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: User can search a letter item" />
+      <option name="NAME_FILTER" value="^User can edit a beneficiary$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User can edit a beneficiary$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: User can edit a beneficiary" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.cucumber.core.cli.*" />
@@ -150,11 +168,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber java.Scenario: User able to search memory items" />
-        <item itemvalue="Cucumber java.Scenario: User can search a letter item" />
-        <item itemvalue="Cucumber java.Scenario: User can view a letter from the list" />
-        <item itemvalue="Cucumber java.Scenario: User can add a letter in memories page" />
-        <item itemvalue="Cucumber java.Scenario: User can edit a letter in memories" />
+        <item itemvalue="Cucumber java.Scenario: Login with valid credentials" />
+        <item itemvalue="Cucumber java.Scenario: Register a valid user with info" />
+        <item itemvalue="Cucumber java.Scenario: Login Data Driven" />
+        <item itemvalue="Cucumber java.Scenario: User can edit a beneficiary" />
       </list>
     </recent_temporary>
   </component>
@@ -172,14 +189,15 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="597" y="326" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1611375665785">
-      <screen x="0" y="40" width="1536" height="824" />
+    <state x="531" y="253" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1611553685681">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="531" y="253" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1611294857599" />
+    <state x="531" y="253" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1611553685681" />
     <state x="597" y="326" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.40.1536.824@0.40.1536.824" timestamp="1611375665785" />
-    <state x="328" y="92" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1611077288657">
-      <screen x="0" y="40" width="1536" height="824" />
+    <state x="292" y="38" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1611553682208">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="292" y="38" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1366.728@0.0.1366.728" timestamp="1611553682208" />
     <state x="328" y="92" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.40.1536.824@0.40.1536.824" timestamp="1611077288657" />
     <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1611297456073">
       <screen x="0" y="0" width="1366" height="728" />
@@ -193,38 +211,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="176" y="137" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610957707155" />
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1611390264305">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1323" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611325870590" />
-    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1611390264305" />
-    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1611390264305">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1323" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611325870590" />
-    <state width="1493" height="198" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1611390264305" />
-    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1611390264305">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1323" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611325870589" />
-    <state width="1493" height="198" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1611390264305" />
-    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1611390264305">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1323" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611325870590" />
-    <state width="1493" height="198" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1611390264305" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1611304473387">
+    <state width="1323" height="114" key="GridCell.Tab.0.bottom" timestamp="1611570442344">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611304473387" />
+    <state width="1323" height="114" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611570442344" />
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1611390264305" />
+    <state width="1323" height="114" key="GridCell.Tab.0.center" timestamp="1611570442344">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="114" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611570442344" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1611390264305" />
+    <state width="1323" height="114" key="GridCell.Tab.0.left" timestamp="1611570442344">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="114" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611570442344" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1611390264305" />
+    <state width="1323" height="114" key="GridCell.Tab.0.right" timestamp="1611570442344">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="114" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611570442344" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1611390264305" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1611554236032">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611554236032" />
     <state x="149" y="303" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1610957708419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="149" y="303" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1610957708419" />
     <state x="167" y="383" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.40.1536.824@0.40.1536.824" timestamp="1610862937718" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1610957775701">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1611555854243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610957775701" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1611555854243" />
   </component>
 </project>

@@ -39,4 +39,19 @@ public class BeneficiarySteps extends BasePage {
         new BeneficiaryPage().beneficiaryDeleteConfirm();
 
     }
+
+    @And("I click on edit beneficiary button")
+    public void iClickOnEditBeneficiaryButton() {
+        new BeneficiaryPage().clickEditBeneficiary();
+    }
+
+    @Then("I enter the beneficiary edit form info")
+    public void iEnterTheBeneficiaryEditFormInfo() {
+        new BeneficiaryPage().editBeneficiaryInfo();
+    }
+
+    @Then("I click on save changes button")
+    public void iClickOnSaveChangesButton() {
+        new BeneficiaryPage().clickOnEditSave();
+    }
 }
